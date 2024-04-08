@@ -1,0 +1,17 @@
+{
+  "name": "MkDocs Material",
+  "image": "squidfunk/mkdocs-material",
+  "forwardPorts": [
+    8000
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  }
+}
