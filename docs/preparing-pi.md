@@ -31,7 +31,7 @@
 
 === "Raspberry Pi"
     ???+ info
-        There is an automatic script to perform the steps below.  Once the script completes, your computer will reboot and you can proceed to the next section, Flashing a hotspot.
+        There is an automatic script to perform the steps below.  Once the script completes, your computer will reboot and you can proceed to the next section, [Flashing a hotspot](flashing-hotspot.md).
         ``` sh
         wget -qO- [https://raw.githubusercontent.com/thehedgefrog/ctrs-documentation/main/script/prepare-pi.sh] | sudo bash -
         ```
