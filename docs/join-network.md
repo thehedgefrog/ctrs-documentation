@@ -6,4 +6,4 @@ You are ready to join the CTRS network.  Run the following command, then open a 
 curl -s https://install.zerotier.com/ | sudo bash
 ```
 
-[Open a ticket](https://www.centrunk.atlassian.net/servicedesk/customer){ .md-button .md-button--primary }
+[Open a ticket](https://centrunk.atlassian.net/servicedesk/customer){ .md-button .md-button--primary }
