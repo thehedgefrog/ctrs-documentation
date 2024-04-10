@@ -1,5 +1,5 @@
 site_name: CTRS Documentation
-
+site_url: https://thehedgefrog.github.io/ctrs-documentation
 
 nav:
   - Setting Up your Site:
@@ -48,6 +48,7 @@ theme:
   features:
     - navigation.footer
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
     - navigation.expand
