@@ -1,10 +1,13 @@
 site_name: CTRS Documentation
 
+
 nav:
-  - index.md
-  - preparing-pi.md
-  - flashing-hotspot.md
-  - join-network.md
+  - Setting Up your Site:
+    - Getting started: index.md
+    - preparing-pi.md
+    - flashing-hotspot.md
+    - join-network.md
+
 
 theme:
 
@@ -41,12 +44,12 @@ theme:
   icon:
     annotation: material/arrow-right-circle
 
-
   features:
     - navigation.footer
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
+    - navigation.expand
     - navigation.top
     - toc.follow
     - toc.integrate
@@ -55,6 +58,7 @@ theme:
     - content.code.copy
     - content.tabs.link
     - content.code.annotate
+
 
 markdown_extensions:
   - abbr
@@ -82,5 +86,6 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/ctrs
   generator: false
+
 
 copyright: © 2022 - 2024 Central Texas Trunked Radio System

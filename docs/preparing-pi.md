@@ -116,7 +116,8 @@
         1.  This updates your PC to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y git nano stm32flash gcc g++ make gcc-arm-none-eabi screen
+        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
+        make build-essential libasio-dev libncurses-dev libssl-dev
         ```
     2. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
