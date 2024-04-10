@@ -51,6 +51,7 @@
         ``` sh
         sudo apt-get update && apt-get upgrade -y # (1)!
         ```
+
         1.  This updates your Pi to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
@@ -113,6 +114,7 @@
         ``` sh
         sudo apt-get update && apt-get upgrade -y # (1)!
         ```
+
         1.  This updates your PC to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
