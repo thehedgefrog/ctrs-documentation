@@ -3,10 +3,11 @@ site_name: CTRS Documentation
 
 nav:
   - Setting Up your Site:
-    - Getting started: index.md
-    - preparing-pi.md
-    - flashing-hotspot.md
-    - join-network.md
+    - Getting started: setting-up/index.md
+    - setting-up/preparing-pi.md
+    - setting-up/flashing-hotspot.md
+    - setting-up/join-network.md
+  - FAQ: faq/faq.md
 
 
 theme:
@@ -78,6 +79,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 
 extra:
