@@ -13,5 +13,6 @@
         "terminal.integrated.shell.linux": "/bin/bash"
       }
     }
-  }
+  },
+  "postCreateCommand": "git config core.fileMode false"
 }
