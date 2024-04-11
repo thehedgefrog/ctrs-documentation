@@ -53,7 +53,7 @@
 
         === "GPIO Pins"
             1. Using jumper wires, connect the sockets of BOOT 1 and BOOT 2 as shown on the image.
-                ![Jumper wires](assets/jumpers.jpg){ align=right }
+                ![Jumper wires](../assets/jumpers.jpg){ align=right }
             !!! danger
                 **Make sure the wires are not touching each other!**
 
