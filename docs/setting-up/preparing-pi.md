@@ -58,17 +58,17 @@
         sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
         make build-essential libasio-dev libncurses-dev libssl-dev
         ```
-    3. Open the startup config:
+    3. Open the `cmdline` config:
 
         ``` sh
-        sudo nano /boot/config.txt
+        sudo nano /boot/firmware/cmdline.txt
         ```
     4. Remove `console=serial0,115200 console=tty1` at the start of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
 
-    5. Open the `cmdline` config:
+    5. Open the startup config:
 
         ``` sh
-        sudo nano /boot/cmdline.txt
+        sudo nano /boot/firmware/config.txt
         ```
     6. Add `dtoverlay=disable-bt` to the `[all]` section of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
 
