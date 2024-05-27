@@ -1,0 +1,97 @@
+
+site_name: CTRS Documentation
+site_url: https://centrunk.github.io/documentation
+
+nav:
+  - Setting Up your Site:
+    - Getting started: setting-up/index.md
+    - setting-up/preparing-pi.md
+    - setting-up/flashing-hotspot.md
+    - setting-up/join-network.md
+  - FAQ: faq/faq.md
+
+
+theme:
+
+  name: material
+
+  palette:
+
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      primary: red
+      accent: indigo
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+      primary: red
+      accent: indigo
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+      primary: red
+      accent: indigo
+
+  logo: assets/icon.png
+  favicon: assets/icon.png
+
+  icon:
+    annotation: material/arrow-right-circle
+
+  features:
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.code.annotate
+
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+extra:
+  homepage: https://www.centrunk.net/
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/ctrs
+  generator: false
+
+
+copyright: © 2022 - 2024 Central Texas Trunked Radio System
