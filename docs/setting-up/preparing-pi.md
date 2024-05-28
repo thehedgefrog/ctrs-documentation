@@ -41,7 +41,7 @@
             You can review the script by visiting the link of the script above.
 
     1.	Connect to your Pi and open a terminal window
-        1.	If you are using a monitor and keyboard connected to the Raspberry Pi itself, open the terminal window and skip to Step 4.
+        1.	If you are using a monitor and keyboard connected to the Raspberry Pi itself, open the terminal window and skip to Step 2.
         2.	If you are accessing the Raspberry Pi over your network, open a session in PuTTY or Windows PowerShell.
             1.	The syntax is ssh user@ipaddress, where user is the username specified in the image setup (default of pi) and ipaddress is the local IP address of the pi on your network.
             2.	You will be prompted to enter your password. Enter the password you specified in the image setup (default raspberry) and press Enter on your keyboard.
