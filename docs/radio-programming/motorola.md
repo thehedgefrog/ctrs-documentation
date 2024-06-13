@@ -17,7 +17,7 @@
     - Keyloading Source: `KVL`
 - Encryption Key List:
     - Create as many rows matching the number of keys you will be loading
-    - Key Name should match
+    - Key Name should match the keys you will be loading for easy identification
     - CKR# needs to be the Decimal format value
 #### Trunking Configuration > Trunking Personality
 Select the Personality that contains the Talkgroups you will be assigning the keys to.
