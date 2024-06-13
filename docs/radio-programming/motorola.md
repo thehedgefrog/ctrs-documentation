@@ -1,10 +1,10 @@
-# Adding Encryption to Motorola 
+# Keyloading a Motorola radio
 ## APX Series (Software Key loading)
-### Requirements (AKA Things You Need)
+### Prerequisites
 - APX CPS 
 - Programming Cable
 - [KFDTool](https://github.com/omahacommsys/KFDtool/releases/latest)
-- Radio Feature Sets
+- Radio Feature Sets (either combination is supported, however you will be limited to the algorithm(s) in your flashcode).
     - QA06653	SW-AES
     - QA07949	DES Software Crypto
     - Q667      Advanced Digital Privacy
@@ -13,14 +13,14 @@
 - General:
     - Secure Operation: `Software`
     - *Secure Algorithms*:
-        - Check the boxes for the Keys you will be loading 
+        - Check the boxes for the algorithms you will be loading (as available in the radio's flashcode)
     - Keyloading Source: `KVL`
 - Encryption Key List:
     - Create as many rows matching the number of keys you will be loading
     - Key Name should match
-    - CRR# needs to be the Decimal format value
+    - CKR# needs to be the Decimal format value
 #### Trunking Configuration > Trunking Personality
-Selcet the Personality that contains the Talkgroups you will be assigning the keys.
+Select the Personality that contains the Talkgroups you will be assigning the keys to.
 
 - Talkgroup *Per talkgroup*
     - Secure / Clear Strapping: `Select` or `Secure` depending on your system's requirements
