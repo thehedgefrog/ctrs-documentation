@@ -6,7 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ make build-essential libasio-dev libncurses-dev libssl-dev
 
 # Removing a console configuration from /boot/cmdline.txt
-sudo sed -i 's/console=serial0,115200 console=tty1 //g' /boot/cmdline.txt
+sudo sed -i 's/console=serial0,115200 //g' /boot/cmdline.txt
 
 # Determining the model of Raspberry Pi to adjust /boot/config.txt accordingly
 model=$(tr -d '\0' < /proc/device-tree/model)
