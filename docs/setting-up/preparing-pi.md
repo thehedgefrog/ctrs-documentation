@@ -63,7 +63,7 @@
         ``` sh
         sudo nano /boot/cmdline.txt
         ```
-    4. Remove `console=serial0,115200 console=tty1` at the start of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
+    4. Remove `console=serial0,115200` at the start of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
 
     5. Open the startup config:
 
