@@ -76,14 +76,14 @@
     7. Disable services that will interfere with the hotspots function with the following commands:
 
         ``` sh
-	sudo systemctl disable serial-getty@ttyAMA0.service && \
+        sudo systemctl disable serial-getty@ttyAMA0.service && \
         sudo systemctl disable hciuart.service && \
         sudo systemctl disable bluealsa.service && \
         sudo systemctl disable bluetooth.service && \
-	sudo systemctl mask serial-getty@ttyAMA0.service && \
-	sudo systemctl mask hciuart.service && \
-	sudo systemctl mask bluealsa.service && \
-	sudo systemctl mask bluetooth.service
+        sudo systemctl mask serial-getty@ttyAMA0.service && \
+        sudo systemctl mask hciuart.service && \
+        sudo systemctl mask bluealsa.service && \
+        sudo systemctl mask bluetooth.service
         ```
     8. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
