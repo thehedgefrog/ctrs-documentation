@@ -5,4 +5,4 @@
 - Programming cable 
 ### XTS Radios
 - Astro CPS
-- Programming Cable
+- Programming cable
