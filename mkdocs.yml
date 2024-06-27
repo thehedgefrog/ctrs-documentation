@@ -8,7 +8,9 @@ nav:
     - setting-up/flashing-hotspot.md
     - setting-up/join-network.md
   - FAQ: faq/faq.md
-
+  - Radio Configuration:
+    - Programming: radio-programming/index.md
+    - radio-programming/motorola.md
 
 theme:
 
