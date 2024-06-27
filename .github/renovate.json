@@ -21,5 +21,16 @@
       "ignoreTests": true
     }
   ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^\\.github/workflows/.*\\.ya?ml$"],
+      "matchStrings": [
+        "pip install mkdocs-material==(?<version>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "mkdocs-material",
+      "versioningTemplate": "semver",
+      "datasourceTemplate": "pypi"
+    }
+  ],
   "platformAutomerge": true
 }
