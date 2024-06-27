@@ -19,7 +19,7 @@ No. Phase II or P25 TDMA operation is unsupported due to hardware limitations.
 LLA/RA is supported, however currently only 1 key per site can be configured.  The ability to define per-radio keys is currently under development and will be added to the system at a later date. LLA requirements are be on a site by site basis, and the enabling of this feature is at the discretion of each site owner.
 
 #### Is TMS supported?
-Yes.  TMS is passed transparently across the network using serverless/U2U mode.
+Motorola Text Messaging Service is supported over conventional mode only via a Unit-to-Unit (U2U) configuration. This may change as we continue to add more features.
 
 #### Is \*insert Motorola proprietary feature here* supported?
 No proprietary features from ANY manufacturers are supported. CTRS operates on a Common-Air Interface so that vendor exclusions are eliminated, therefore permitting greater entry opportunity for a user's'choice of radio manufacturer.
