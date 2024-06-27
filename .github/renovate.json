@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard"
+  ],
+  "reviewers": ["thehedgefrog"],
+  "assignees": ["thehedgefrog"],
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "addLabels": ["actions","renovate"],
+      "matchUpdateTypes": ["minor","patch"],
+      "automerge": true,
+      "ignoreTests": true
+    },
+    {
+      "matchPackageNames": ["mkdocs-material"],
+      "addLabels": ["mkdocs", "renovate"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "ignoreTests": true
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^\\.github/workflows/.*\\.ya?ml$"],
+      "matchStrings": [
+        "pip install mkdocs-material==(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "mkdocs-material",
+      "versioningTemplate": "semver",
+      "datasourceTemplate": "pypi"
+    }
+  ],
+  "platformAutomerge": true
+}
