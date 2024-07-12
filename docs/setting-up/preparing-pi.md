@@ -55,7 +55,7 @@
         1.  This updates your Pi to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y curl wget stm32flash
+        sudo apt-get install -y curl wget stm32flash libssl1.1
         ```
     3. Open the `cmdline` config:
 
@@ -122,7 +122,7 @@
         1.  This updates your PC to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y nano xz-utils curl wget stm32flash
+        sudo apt-get install -y nano xz-utils curl wget stm32flash libssl1.1
         ```
     2. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
