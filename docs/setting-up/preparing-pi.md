@@ -55,7 +55,8 @@
         1.  This updates your Pi to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y curl wget stm32flash libssl1.1
+        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
+        make build-essential libasio-dev libncurses-dev libssl-dev
         ```
     3. Open the `cmdline` config:
 
@@ -76,14 +77,9 @@
     7. Disable services that will interfere with the hotspots function with the following commands:
 
         ``` sh
-        sudo systemctl disable serial-getty@ttyAMA0.service && \
         sudo systemctl disable hciuart.service && \
         sudo systemctl disable bluealsa.service && \
-        sudo systemctl disable bluetooth.service && \
-        sudo systemctl mask serial-getty@ttyAMA0.service && \
-        sudo systemctl mask hciuart.service && \
-        sudo systemctl mask bluealsa.service && \
-        sudo systemctl mask bluetooth.service
+        sudo systemctl disable bluetooth.service
         ```
     8. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
@@ -97,13 +93,13 @@
             === "Hotspots"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware-hs.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware-hs.git
                 ```
 
             === "Repeater Boards"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware.git
                 ```
     9.	Reboot the Raspberry Pi with the following command:
 
@@ -122,7 +118,8 @@
         1.  This updates your PC to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y nano xz-utils curl wget stm32flash libssl1.1
+        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
+        make build-essential libasio-dev libncurses-dev libssl-dev
         ```
     2. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
@@ -136,11 +133,11 @@
             === "Hotspots"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware-hs.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware-hs.git
                 ```
 
             === "Repeater Boards"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware.git
                 ```
