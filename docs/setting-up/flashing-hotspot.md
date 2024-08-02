@@ -1,28 +1,41 @@
 # Flashing a hotspot
 
-## Preparing the firmware
+## Building the firmware
 
 === "Hat Hotspot"
 
-    1. Extract the firmware bundle with
-    ``` sh
-    tar xvf dvmfirmware-hs.tar.xz
-    ```
-    2. Change directories to the firmware folder with
+    1. Change directories to the firmware folder with
     ``` sh
     cd /opt/centrunk/dvmfirmware-hs
     ```
+    2.	Build the firmware binary
+    ``` sh
+    sudo make -f Makefile.STM32FX mmdvm-hs-hat-dual
+    ```
+    !!! info
+        Depending on the performance of your Raspberry Pi or PC, this step can take a while.
 
 === "Repeater Board"
 
-    1. Extract the firmware bundle with
+    1. Change directories to the firmware folder with
     ``` sh
-    tar xvf dvmfirmware.tar.xz
+    cd /opt/centrunk/dvmfirmware-hs
     ```
-    2.	Change directories to the firmware folder with
-    ``` sh
-    cd /opt/centrunk/dvmfirmware
-    ```
+    2.	Build the firmware binary
+        1.	Generic STM32 Board
+        ``` sh
+        sudo make -f Makefile.STM32F4
+        ```
+        2.	Repeater Builder Board
+        ``` sh
+        sudo make -f Makefile.STM32F4_POG
+        ```
+        3.	WA0EDA V3 cards
+        ``` sh
+        sudo make -f Makefile.STM32F4_EDA
+        ```
+        !!! info
+            Depending on the performance of your Raspberry Pi or PC, this step can take a while.
 
 ## Flashing the board
 
