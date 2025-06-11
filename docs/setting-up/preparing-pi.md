@@ -70,11 +70,19 @@
         ``` sh
         sudo nano /boot/config.txt
         ```
+
     6. Add `dtoverlay=disable-bt` to the `[all]` section of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
 
         !!! warning
             If you are using a Pi 3, add `dtoverlay=pi3-disable-bt` to the `[all]` section of the file instead.
-    7. Disable services that will interfere with the hotspots function with the following commands:
+    
+    7. If on a Pi 5 using Bookworm or newer, add the following to the `[all]` section of the file:
+        ```
+        enable_uart=1
+        dtoverlay=uart0,ctsrts
+        ```
+
+    8. Disable services that will interfere with the hotspots function with the following commands:
 
         ``` sh
         sudo systemctl disable serial-getty@ttyAMA0.service && \
@@ -86,7 +94,7 @@
         sudo systemctl mask bluealsa.service && \
         sudo systemctl mask bluetooth.service
         ```
-    8. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
+    9. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
         ``` sh
         sudo mkdir /opt/centrunk && \
@@ -106,7 +114,7 @@
                 ``` sh
                 sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware.git
                 ```
-    9.	Reboot the Raspberry Pi with the following command:
+    10.	Reboot the Raspberry Pi with the following command:
 
         ``` sh
         sudo reboot now
