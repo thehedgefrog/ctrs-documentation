@@ -19,7 +19,7 @@ fi
 echo "$overlay" | sudo tee -a /boot/config.txt
 
 # Prompt user to select device type
-read -p "Install for hotspots (h) or repeater boards (r)? " choice
+read -p "Install for hotspots (h) or repeater boards (r)? " choice < /dev/tty
 if [ "$choice" = "h" ]; then
     sudo mkdir -p /opt/centrunk
     cd /opt/centrunk
