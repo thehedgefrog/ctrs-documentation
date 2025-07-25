@@ -55,7 +55,8 @@
         1.  This updates your Pi to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y curl wget stm32flash
+        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
+        make build-essential libasio-dev libncurses-dev libssl-dev
         ```
     3. Open the `cmdline` config:
 
@@ -69,11 +70,19 @@
         ``` sh
         sudo nano /boot/config.txt
         ```
+
     6. Add `dtoverlay=disable-bt` to the `[all]` section of the file, then press `Ctrl + S` to save and `Ctrl + X` to close.
 
         !!! warning
             If you are using a Pi 3, add `dtoverlay=pi3-disable-bt` to the `[all]` section of the file instead.
-    7. Disable services that will interfere with the hotspots function with the following commands:
+    
+    7. If on a Pi 5 using Bookworm or newer, add the following to the `[all]` section of the file:
+        ```
+        enable_uart=1
+        dtoverlay=uart0,ctsrts
+        ```
+
+    8. Disable services that will interfere with the hotspots function with the following commands:
 
         ``` sh
         sudo systemctl disable serial-getty@ttyAMA0.service && \
@@ -85,7 +94,7 @@
         sudo systemctl mask bluealsa.service && \
         sudo systemctl mask bluetooth.service
         ```
-    8. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
+    9. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
         ``` sh
         sudo mkdir /opt/centrunk && \
@@ -97,15 +106,15 @@
             === "Hotspots"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware-hs.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware-hs.git
                 ```
 
             === "Repeater Boards"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware.git
                 ```
-    9.	Reboot the Raspberry Pi with the following command:
+    10.	Reboot the Raspberry Pi with the following command:
 
         ``` sh
         sudo reboot now
@@ -122,7 +131,8 @@
         1.  This updates your PC to the latest software.  The command `-y`, in this context, enables to bypass the prompt asking you to confirm with `y` that you want to make the changes.
 
         ``` sh
-        sudo apt-get install -y nano xz-utils curl wget stm32flash
+        sudo apt-get install -y git stm32flash gcc-arm-none-eabi gcc g++ \
+        make build-essential libasio-dev libncurses-dev libssl-dev
         ```
     2. Make directories to the Centrunk folder, navigate to it, then clone the firmware with the following commands:
 
@@ -136,11 +146,11 @@
             === "Hotspots"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware-hs.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware-hs.git
                 ```
 
             === "Repeater Boards"
 
                 ``` sh
-                sudo wget https://github.com/faultywarrior/dvmbins/raw/main/dvmfirmware.tar.xz
+                sudo git clone --recurse-submodules https://github.com/DVMProject/dvmfirmware.git
                 ```
